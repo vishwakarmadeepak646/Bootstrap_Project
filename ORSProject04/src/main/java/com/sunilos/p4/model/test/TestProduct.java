@@ -95,7 +95,7 @@ public class TestProduct {
 		ProductBean bean = new ProductBean();
 		ProductModel model = new ProductModel();
 		
-		bean = model.findByProudctName("Mobile");
+		bean = model.findByProductName("Mobile");
 		
 		if(bean != null ) {
 			System.out.println("------------------");
