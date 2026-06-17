@@ -312,6 +312,62 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 
 					</ul></li>
+					
+					<!------------ Daily Module ----------------->
+					
+					
+					
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle px-3 py-3" href="#"
+					data-bs-toggle="dropdown" aria-expanded="false"> <i
+						class="bi bi-easel me-1"></i> Daily Module
+				</a>
+					<ul
+						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
+						style="min-width: 230px; background: #1a2e4a;">
+
+						<!-- Product -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-cart-check me-1"></i> Product
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.PRODUCT_CTL%>" target=""> <i
+								class="bi bi-cart-plus me-2 text-warning"></i> Add Product
+								
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.PRODUCT_LIST_CTL%>" target=""> <i
+								class="bi bi-cart4 me-2 text-warning"></i> Product
+								List
+						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+						
+						<!-- Employee -->
+						
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-person-square me-1"></i> Employee
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.EMPLOYEE_CTL%>" target=""> <i
+								class="bi bi-person-fill-add"></i> Add Employee
+								
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.EMPLOYEE_LIST_CTL%>" target=""> <i
+								class="bi bi-person-lines-fill me-2 text-warning"></i> Employee
+								List
+						</a></li>
+
+						
+					</ul></li>
+					
+					
+					
 				<%
 				}
 				%>

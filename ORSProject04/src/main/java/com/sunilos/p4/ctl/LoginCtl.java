@@ -144,7 +144,7 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 			session.setAttribute("role", "invalid role id " + rollId);
 		}
 
-		ServletUtility.forwardPage(ORSView.WELCOME_VIEW, request, response);
+		ServletUtility.redirect(ORSView.WELCOME_CTL, request, response);
 
 	}
 

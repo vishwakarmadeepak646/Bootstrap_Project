@@ -103,12 +103,12 @@ MessageSource ms = MessageSource.getInstance();
 						class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
 						<a href="<%=ORSView.USER_REGISTRATION_CTL%>"
 							class="text-success fw-semibold text-decoration-none small">
-							<i class="bi bi-person-plus-fill me-1"></i>
-						<ors:message key="login.signup" />
+							<i class="bi bi-person-plus-fill me-1"></i> <ors:message
+								key="login.signup" />
 						</a> <a href="<%=ORSView.FORGET_PASSWORD_CTL%>"
 							class="text-secondary text-decoration-none small"> <i
-							class="bi bi-question-circle me-1"></i>
-						<ors:message key="login.forgotpassword" />
+							class="bi bi-question-circle me-1"></i> <ors:message
+								key="login.forgotpassword" />
 						</a>
 					</div>
 
