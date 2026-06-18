@@ -287,7 +287,7 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 		<div class="col-6 col-md-4 col-lg-3">
 			<a href="<%=ORSView.GET_MARKSHEET_CTL%>" class="text-decoration-none">
 				<div
-					class="card h-100 border-0 shadow-sm rounded-4 text-center p-3 ors-card"
+					class="card h-100 border-0 shadow-sm rounded-4 text-center p-3 ors-card border-top border-4 border-info"
 					style="border-top: 4px solid #7c3aed;">
 					<div class="fs-1 mb-2" style="color: #7c3aed;">
 						<i class="bi bi-search"></i>

@@ -12,7 +12,15 @@ boolean isAdmin = loggedIn && userBean.getRoleId() == RoleBean.ADMIN;
 boolean isStudent = loggedIn && userBean.getRoleId() == RoleBean.STUDENT;
 String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttribute("role") + ")" : "Guest";
 %>
-
+<style>
+@media ( max-width : 991px) {
+	#mainNav {
+		background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);
+		padding: 10px;
+		border-radius: 0 0 10px 10px;
+	}
+}
+</style>
 <nav class="navbar navbar-expand-lg py-0"
 	style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%); min-height: 58px;">
 	<div class="container-fluid px-4">
@@ -363,6 +371,44 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								List
 						</a></li>
 
+						<!-- Employee -->
+						
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-person-square me-1"></i> Employee
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INTERVIEW_CTL%>" target=""> <i
+								class="bi bi-person-fill-add"></i> Add Interview
+								
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INTERVIEW_LIST_CTL%>" target=""> <i
+								class="bi bi-person-lines-fill me-2 text-warning"></i> Interview List
+								List
+						</a></li>
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+						<!-- Interview -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-cart-check me-1"></i> Interview
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INTERVIEW_CTL%>" target=""> <i
+								class="bi bi-cart-plus me-2 text-warning"></i> Add Interview
+								
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INTERVIEW_LIST_CTL%>" target=""> <i
+								class="bi bi-cart4 me-2 text-warning"></i> Interview
+								List
+						</a></li>
+						
+						<li><hr class="dropdown-divider border-secondary"></li>
+
 						
 					</ul></li>
 					
@@ -404,6 +450,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<!-- Home -->
 				<li class="nav-item"><a class="nav-link px-2"
 					href="<%=ORSView.WELCOME_CTL%>"> <i class="bi bi-house-fill"></i>
+					<span class="d-lg-none ms-1">Home</span>
 				</a></li>
 
 				<!-- My Account dropdown (logged-in) -->
@@ -416,7 +463,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						class="rounded-circle bg-white text-primary d-flex align-items-center justify-content-center fw-bold"
 						style="width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0;">
 							<%=userBean.getFirstName().substring(0, 1).toUpperCase()%>
-					</span> <span class="d-none d-lg-inline small"><%=userBean.getFirstName()%></span>
+					</span> <span class="d-lg-inline small"><%=userBean.getFirstName()%></span>
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow border-0 rounded-3"

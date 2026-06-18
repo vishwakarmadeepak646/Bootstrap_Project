@@ -103,5 +103,10 @@ public interface ORSView {
 	public String EMPLOYEE_LIST_VIEW = PAGE_FOLDER + "/EmployeeListView.jsp";
 	public String EMPLOYEE_CTL = APP_CONTEXT + "/ctl/EmployeeCtl";
 	public String EMPLOYEE_LIST_CTL = APP_CONTEXT + "/ctl/EmployeeListCtl";
+	
+	public String INTERVIEW_VIEW = PAGE_FOLDER + "/InterviewView.jsp";
+	public String INTERVIEW_LIST_VIEW = PAGE_FOLDER + "/InterviewListView.jsp";
+	public String INTERVIEW_CTL = APP_CONTEXT + "/ctl/InterviewCtl";
+	public String INTERVIEW_LIST_CTL = APP_CONTEXT + "/ctl/InterviewListCtl";
 
 }
