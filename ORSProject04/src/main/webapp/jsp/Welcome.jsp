@@ -241,7 +241,7 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 		</div>
 
 		<div class="col-6 col-md-4 col-lg-3">
-			<a href="#" class="text-decoration-none">
+			<a href="<%=ORSView.PRODUCT_LIST_CTL %>" class="text-decoration-none">
 				<div
 					class="card h-100 border-0 shadow-sm rounded-4 text-center p-3 ors-card border-top border-4 border-info">
 					<div class="fs-1 mb-2" style="color: #0891b2;">
