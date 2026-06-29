@@ -328,7 +328,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle px-3 py-3" href="#"
 					data-bs-toggle="dropdown" aria-expanded="false"> <i
-						class="bi bi-easel me-1"></i> Daily Module
+						class="bi bi-journal-bookmark me-1"></i> Daily Module 
 				</a>
 					<ul
 						class="dropdown-menu dropdown-menu-dark shadow border-0 rounded-3"
@@ -374,17 +374,17 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><hr class="dropdown-divider border-secondary"></li>
 						<li>
 							<h6 class="dropdown-header text-uppercase text-warning small">
-								<i class="bi bi-cart-check me-1"></i> Interview
+								<i class="bi bi-person-badge me-1"></i> Interview
 							</h6>
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.INTERVIEW_CTL%>" target=""> <i
-								class="bi bi-cart-plus me-2 text-warning"></i> Add Interview
+								class="bi bi-person-badge-fill me-2 text-warning"></i> Add Interview
 
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.INTERVIEW_LIST_CTL%>" target=""> <i
-								class="bi bi-cart4 me-2 text-warning"></i> Interview List
+								class="bi bi-person-badge-fill me-2 text-warning"></i> Interview List
 						</a></li>
 					</ul></li>
 
