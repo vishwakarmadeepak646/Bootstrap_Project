@@ -1,3 +1,4 @@
+<%@page import="com.sunilos.p4.util.MessageSource"%>
 <%@page import="com.sunilos.p4.ctl.ORSView"%>
 <%@page import="com.sunilos.p4.bean.UserBean"%>
 <%@page import="com.sunilos.p4.bean.RoleBean"%>
@@ -8,6 +9,10 @@ boolean loggedIn = currentUser != null;
 boolean isStudent = loggedIn && currentUser.getRoleId() == RoleBean.STUDENT;
 boolean isAdmin = loggedIn && currentUser.getRoleId() == RoleBean.ADMIN;
 String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
+%>
+
+<%
+MessageSource ms = MessageSource.getInstance();
 %>
 
 <div class="container-fluid px-4 py-4" style="max-width: 1100px;">
@@ -23,18 +28,17 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 		</div>
 		<div>
 			<h1 class="fw-bold mb-1 fs-2">
-				Welcome<%
+				<%=ms.get("welcome.title")%><%
 			if (loggedIn) {
 			%>,
 				<%=firstName%>!<%
 			} else {
 			%>
-				to ORS<%
+				<%=ms.get("welcome.ElseTitle") %><%
 			}
 			%>
 			</h1>
-			<p class="mb-0 opacity-75">Online Result System &mdash; Powered
-				by Rays Technologies</p>
+			<p class="mb-0 opacity-75"><%= ms.get("welcome.tagline") %></p>
 		</div>
 	</div>
 
@@ -43,13 +47,13 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 		style="letter-spacing: .08em;">
 		<%
 		if (isAdmin) {
-		%>Administration Panel
+		%><%= ms.get("welcome.adm") %>
 		<%
 		} else if (isStudent) {
 		%>Quick Access
 		<%
 		} else {
-		%>Get Started<%
+		%><%= ms.get("welcome.start")%><%
 		}
 		%>
 	</p>
@@ -126,8 +130,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-primary mb-2">
 						<i class="bi bi-people-fill"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Users</h6>
-					<p class="text-muted small mb-0">Manage system users</p>
+					<h6 class="fw-bold mb-1"><%= ms.get("welcome.user") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.userLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -139,8 +143,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-success mb-2">
 						<i class="bi bi-bank2"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Colleges</h6>
-					<p class="text-muted small mb-0">Manage college records</p>
+					<h6 class="fw-bold mb-1"><%= ms.get("welcome.college") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.collegeLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -152,8 +156,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 mb-2" style="color: black;">
 						<i class="bi bi-mortarboard-fill"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Students</h6>
-					<p class="text-muted small mb-0">Manage student records</p>
+					<h6 class="fw-bold mb-1"><%= ms.get("welcome.students") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.studentsLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -166,8 +170,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-warning mb-2">
 						<i class="bi bi-file-earmark-text-fill"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Marksheets</h6>
-					<p class="text-muted small mb-0">Manage marksheet records</p>
+					<h6 class="fw-bold mb-1"><%= ms.get("welcome.Marksheets") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.MarksheetsLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -179,8 +183,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-danger mb-2">
 						<i class="bi bi-shield-fill-check"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Roles</h6>
-					<p class="text-muted small mb-0">Manage user roles</p>
+					<h6 class="fw-bold mb-1"><%= ms.get("welcome.roles") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.rolesLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -194,8 +198,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 mb-2" style="color: #0d9488;">
 						<i class="bi bi-trophy-fill"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Merit List</h6>
-					<p class="text-muted small mb-0">View merit rankings</p>
+					<h6 class="fw-bold mb-1"> <%= ms.get("welcome.merit") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.meritLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -207,8 +211,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-primary mb-2">
 						<i class="bi bi-search"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Get Marksheet</h6>
-					<p class="text-muted small mb-0">Lookup a marksheet</p>
+					<h6 class="fw-bold mb-1"><%= ms.get("welcome.getMark") %></h6>
+					<p class="text-muted small mb-0"> <%= ms.get("welcome.getMarkLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -220,8 +224,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 mb-2" style="color: #374151;">
 						<i class="bi bi-person-gear"></i>
 					</div>
-					<h6 class="fw-bold mb-1">My Profile</h6>
-					<p class="text-muted small mb-0">View and edit your profile</p>
+					<h6 class="fw-bold mb-1"> <%= ms.get("welcome.profile") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.profileLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -234,8 +238,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 mb-2" style="color: #0891b2;">
 						<i class="bi bi-person-badge-fill"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Faculty</h6>
-					<p class="text-muted small mb-0">Manage faculty records</p>
+					<h6 class="fw-bold mb-1"> <%= ms.get("welcome.faculty") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.facultyLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -247,8 +251,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 mb-2" style="color: #0891b2;">
 						<i class="bi bi-cart"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Product</h6>
-					<p class="text-muted small mb-0">Manage Product records</p>
+					<h6 class="fw-bold mb-1"> <%= ms.get("welcome.product") %></h6>
+					<p class="text-muted small mb-0"> <%= ms.get("welcome.productLine") %></p>
 				</div>
 			</a>
 		</div>
@@ -264,8 +268,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-primary mb-2">
 						<i class="bi bi-box-arrow-in-right"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Login</h6>
-					<p class="text-muted small mb-0">Sign in to your account</p>
+					<h6 class="fw-bold mb-1"><%=ms.get("welcome.login") %></h6>
+					<p class="text-muted small mb-0"><%= ms.get("welcome.signUp") %></p>
 				</div>
 			</a>
 		</div>
@@ -278,8 +282,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 text-success mb-2">
 						<i class="bi bi-person-plus-fill"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Register</h6>
-					<p class="text-muted small mb-0">Create a new account</p>
+					<h6 class="fw-bold mb-1"><%=ms.get("welcome.register") %></h6>
+					<p class="text-muted small mb-0"><%=ms.get("welcome.ac") %></p>
 				</div>
 			</a>
 		</div>
@@ -292,8 +296,8 @@ String firstName = loggedIn ? currentUser.getFirstName() : "Guest";
 					<div class="fs-1 mb-2" style="color: #7c3aed;">
 						<i class="bi bi-search"></i>
 					</div>
-					<h6 class="fw-bold mb-1">Get Marksheet</h6>
-					<p class="text-muted small mb-0">Search for a marksheet</p>
+					<h6 class="fw-bold mb-1"><%=ms.get("welcome.marksheet") %></h6>
+					<p class="text-muted small mb-0"><%=ms.get("welcome.search") %></p>
 				</div>
 			</a>
 		</div>

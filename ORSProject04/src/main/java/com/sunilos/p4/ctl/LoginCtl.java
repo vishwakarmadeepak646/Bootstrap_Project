@@ -53,16 +53,17 @@ public class LoginCtl extends BaseCtl<UserBean, UserModel> {
 		if (DataValidator.isNull(login)) {
 			// request.setAttribute("login", PropertyReader.getValue("error.require", "Login
 			// Id"));
-			request.setAttribute("login", PropertyReader.getValue("error.require", "LoginId"));
-//			request.setAttribute("login", ms.get("valid.required"));
+//			request.setAttribute("login", PropertyReader.getValue("error.require", "LoginId"));
+			request.setAttribute("login", ms.get("valid.required"));
 			pass = false;
 		} else if (!DataValidator.isEmail(login)) {
 			request.setAttribute("login", PropertyReader.getValue("error.email", "Login "));
 			pass = false;
 		}
 		if (DataValidator.isNull(request.getParameter("password"))) {
-			request.setAttribute("password", PropertyReader.getValue("error.require", "Password"));
-//			request.setAttribute("password", ms.get("valid.required"));
+			// request.setAttribute("password", PropertyReader.getValue("error.require",
+			// "Password"));
+			request.setAttribute("password", ms.get("valid.required"));
 			pass = false;
 		}
 
