@@ -7,9 +7,9 @@ import java.util.ResourceBundle;
  * Read the property values from application properties file using Resource
  * Bundle
  * 
- * @author Rays Technologies
+ * @author Deepak Vishwakarma
  * @version 1.0
- * @Copyright (c) Rays Technologies
+ * @Copyright (c) Rays EdTech
  * 
  */
 

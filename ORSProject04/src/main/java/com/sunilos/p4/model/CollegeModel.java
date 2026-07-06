@@ -14,9 +14,9 @@ import com.sunilos.p4.util.JDBCDataSource;
 /**
  * JDBC Implementation of CollegeModel
  * 
- * @author Rays Technologies
+ * @author Deepak Vishwakarma
  * @version 1.0
- * @Copyright (c) Rays Technologies
+ * @Copyright (c) Rays EdTech
  */
 public class CollegeModel extends BaseModel<CollegeBean> {
 

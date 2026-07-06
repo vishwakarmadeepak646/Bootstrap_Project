@@ -18,9 +18,9 @@ import com.sunilos.p4.util.JDBCDataSource;
 /**
  * JDBC Implementation of Marksheet Model
  * 
- * @author Rays Technologies
+ * @author Deepak Vishwakarma
  * @version 1.0
- * @Copyright (c) Rays Technologies
+ * @Copyright (c) Rays EdTech
  */
 public class MarksheetModel extends BaseModel<MarksheetBean> {
 

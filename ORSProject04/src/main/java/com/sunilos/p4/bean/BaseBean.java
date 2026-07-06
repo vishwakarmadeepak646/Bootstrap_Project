@@ -8,22 +8,21 @@ import java.sql.Timestamp;
 /**
  * Parent class of all Beans in application. It contains generic attributes.
  * 
- * @author Rays Technologies
+ * @author Deepak Vishwakarma
  * @version 1.0
- * @Copyright (c) Rays Technologies
+ * @Copyright (c) Rays EdTech
  * 
  */
 
 public abstract class BaseBean implements Serializable, DropdownListBean, Comparable<BaseBean> {
 
 	/**
-	 * Non Business primary key इसमें नॉन बिज़नेस के स्टोर की जाती है
+	 * Non Business primary key
 	 */
 	protected long id;
 
 	/**
-	 * Contains USER ID who created this database record. इसमें रिकॉर्ड क्रिएट करने
-	 * वाले यूजर का ID स्टोर किया जाता है
+	 * Contains USER ID who created this database record.
 	 */
 	protected String createdBy;
 

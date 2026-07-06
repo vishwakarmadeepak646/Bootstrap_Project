@@ -15,9 +15,9 @@ import com.sunilos.p4.util.JDBCDataSource;
 /**
  * JDBC Implementation of Role Model
  * 
- * @author Rays Technologies
+ * @author Deepak Vishwakarma
  * @version 1.0
- * @Copyright (c) Rays Technologies
+ * @Copyright (c) Rays EdTech
  */
 public class RoleModel extends BaseModel<RoleBean> {
 

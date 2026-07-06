@@ -470,7 +470,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.CHANGE_PASSWORD_CTL%>"> <i
 								class="bi bi-key me-2 text-warning"></i> <%=ms.get("login.changePss") %>
 						</a></li>
-						<li><a class="dropdown-item"
+						<li><a class="dropdown-item" target="blank"
 							href="<%=ORSView.JAVA_DOC_VIEW%>"> <i
 								class="bi bi-book me-2 text-success"></i> <%=ms.get("login.javadoc") %>
 						</a></li>
