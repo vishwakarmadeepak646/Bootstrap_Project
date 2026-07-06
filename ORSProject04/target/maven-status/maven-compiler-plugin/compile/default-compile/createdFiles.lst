@@ -33,12 +33,16 @@ com\sunilos\p4\ctl\StudentCtl.class
 com\sunilos\p4\ctl\MarksheetCtl.class
 com\sunilos\p4\model\EmployeeModel.class
 com\sunilos\p4\model\test\Test.class
+com\sunilos\p4\bean\InsuranceBean.class
 com\sunilos\p4\model\test\EmployeeTest.class
 com\sunilos\p4\ctl\EmployeeCtl.class
 com\sunilos\p4\ctl\PerformanceMonitorFilter.class
 com\sunilos\p4\util\JDBCDataSource.class
 com\sunilos\p4\ctl\RoleListCtl.class
 com\sunilos\p4\ctl\MarksheetListCtl.class
+com\sunilos\p4\ctl\InsuranceListCtl.class
+com\sunilos\p4\ctl\InsuranceCtl.class
+com\sunilos\p4\model\InsuranceModel.class
 com\sunilos\p4\util\ServletUtility.class
 com\sunilos\p4\ctl\FacultyReportCtl.class
 com\sunilos\p4\ctl\StudentListCtl.class
@@ -57,6 +61,7 @@ com\sunilos\p4\model\test\TestProduct.class
 com\sunilos\p4\ctl\StudentReportCtl.class
 com\sunilos\p4\ctl\BaseListCtl.class
 com\sunilos\p4\ctl\CollegeReportCtl.class
+com\sunilos\p4\model\TestInsurance.class
 com\sunilos\p4\ctl\CourseCtl.class
 com\sunilos\p4\model\CourseModel.class
 com\sunilos\p4\util\EmailMessage.class
@@ -79,6 +84,7 @@ com\sunilos\p4\ctl\FrontController.class
 com\sunilos\p4\model\test\EmailUtilityTest.class
 com\sunilos\p4\ctl\MarksheetReportCtl.class
 com\sunilos\p4\rest\RoleRestCtl.class
+com\sunilos\p4\ctl\InsuranceReportCtl.class
 com\sunilos\p4\bean\CollegeBean.class
 com\sunilos\p4\util\PropertyReader.class
 com\sunilos\p4\util\EmailBuilder.class

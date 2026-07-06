@@ -68,7 +68,7 @@ public class InsuranceCtl extends BaseCtl<InsuranceBean, InsuranceModel>{
 	@Override
 	protected String getView(String op) {
 		if (OP_CANCEL.equalsIgnoreCase(op)) {
-			return ORSView.INSURANCE_CTL;
+			return ORSView.INSURANCE_LIST_CTL;
 		}
 		return ORSView.INTERVIEW_VIEW;
 	}
