@@ -18,6 +18,11 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 		Connection conn = null;
 		int pk = 0;
 
+		EmployeeBean existbean = findByEmpName(bean.getEmpName());
+		if (existbean != null && existbean.getId() != bean.getId()) {
+			throw new DuplicateRecordException("Employee Name already exists");
+		}
+
 		try {
 			conn = JDBCDataSource.getConnection();
 			pk = nextPK();
@@ -43,7 +48,7 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 				ex.printStackTrace();
 				throw new ApplicationException("Exception : add rollback exception " + ex.getMessage());
 			}
-			throw new ApplicationException("Exception : Exception in add User" + e.getMessage() );
+			throw new ApplicationException("Exception : Exception in add User" + e.getMessage());
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}
@@ -56,6 +61,11 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 
 		Connection conn = null;
 		int pk = 0;
+
+		EmployeeBean existbean = findByEmpName(bean.getEmpName());
+		if (existbean != null && existbean.getId() != bean.getId()) {
+			throw new DuplicateRecordException("Employee Name already exists");
+		}
 
 		try {
 			conn = JDBCDataSource.getConnection();
@@ -121,7 +131,5 @@ public class EmployeeModel extends BaseModel<EmployeeBean> {
 	public EmployeeBean getBean() {
 		return new EmployeeBean();
 	}
-	
-	
 
 }

@@ -82,7 +82,8 @@ public interface ORSView {
 	public String SUBJECT_REPORT_CTL = APP_CONTEXT + "/ctl/SubjectReportCtl";
 	public String MARKSHEET_REPORT_CTL = APP_CONTEXT + "/ctl/MarksheetReportCtl";
 	public String FACULTY_REPORT_CTL = APP_CONTEXT + "/ctl/FacultyReportCtl";
-
+	public String INSURANCE_REPORT_CTL = APP_CONTEXT + "/ctl/InsuranceReportCtl";
+	
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
 	public String COLLEGE_REPORT_VIEW = "/reports/CollegeListReport.jrxml";
@@ -91,6 +92,7 @@ public interface ORSView {
 	public String SUBJECT_REPORT_VIEW = "/reports/SubjectListReport.jrxml";
 	public String MARKSHEET_REPORT_VIEW = "/reports/MarksheetListReport.jrxml";
 	public String FACULTY_REPORT_VIEW = "/reports/FacultyListReport.jrxml";
+	public String INSURANCE_REPORT_VIEW = "/reports/InsuranceListReport.jrxml";
 	
 	// Module's Paths
 	
@@ -108,5 +110,10 @@ public interface ORSView {
 	public String INTERVIEW_LIST_VIEW = PAGE_FOLDER + "/InterviewListView.jsp";
 	public String INTERVIEW_CTL = APP_CONTEXT + "/ctl/InterviewCtl";
 	public String INTERVIEW_LIST_CTL = APP_CONTEXT + "/ctl/InterviewListCtl";
+	
+	public String INSURANCE_VIEW = PAGE_FOLDER + "/InsuranceView.jsp";
+	public String INSURANCE_LIST_VIEW = PAGE_FOLDER + "/InsuranceListView.jsp";
+	public String INSURANCE_CTL = APP_CONTEXT + "/ctl/InsuranceCtl";
+	public String INSURANCE_LIST_CTL = APP_CONTEXT + "/ctl/InsuranceListCtl";
 
 }

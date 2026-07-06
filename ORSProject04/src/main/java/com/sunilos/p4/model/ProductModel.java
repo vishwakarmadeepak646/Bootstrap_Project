@@ -18,7 +18,7 @@ public class ProductModel extends BaseModel<ProductBean> {
 
 		ProductBean existbean = findByProductName(bean.getProductName());
 
-		if (existbean != null) {
+		if (existbean != null && existbean.getId() != bean.getId()) {
 			throw new DuplicateRecordException("productName already exists");
 		}
 

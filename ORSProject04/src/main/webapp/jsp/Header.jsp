@@ -249,7 +249,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.COLLEGE_REPORT_CTL%>" target="_blank"> <i
-								class="bi bi-file-earmark-pdf me-2 text-warning"></i><%= ms.get("aca.clgList")%>
+								class="c vbnmbi bi-file-earmark-pdf me-2 text-warning"></i><%= ms.get("aca.clgList")%>
 						</a></li>
 						<li><a class="dropdown-item"
 							href="<%=ORSView.COURSE_REPORT_CTL%>" target="_blank"> <i
@@ -296,6 +296,17 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><a class="dropdown-item"
 							href="<%=ORSView.MARKSHEET_REPORT_CTL%>" target="_blank"> <i
 								class="bi bi-file-earmark-pdf me-2 text-warning"></i> <%= ms.get("marksheet.list.title")%>
+						</a></li>
+						
+						<!-- Daily Module  -->
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-journal-bookmark me-1"></i> <%=ms.get("daily.title") %>
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INSURANCE_REPORT_CTL%>" target="_blank"> <i
+								class="bi bi-file-earmark-pdf me-2 text-warning"></i><%=ms.get("daily.insureanceReport") %>
 						</a></li>
 
 					</ul></li>
@@ -364,7 +375,28 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.INTERVIEW_LIST_CTL%>" target=""> <i
 								class="bi bi-person-badge-fill me-2 text-warning"></i> <%=ms.get("daily.IntList") %>
 						</a></li>
+						
+						
+					<!-- Insurance -->
+						<li><hr class="dropdown-divider border-secondary"></li>
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-postcard-heart me-1"></i>  <%=ms.get("daily.insurance") %>
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INSURANCE_CTL%>" target=""> <i
+								class="bi bi-person-heart me-2 text-warning"></i> <%=ms.get("daily.addInsurance") %>
+
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.INSURANCE_LIST_CTL%>" target=""> <i
+								class="bi bi-person-heart me-2 text-warning"></i> <%=ms.get("daily.insuranceList") %>
+						</a></li>
+					
 					</ul></li>
+					
+					
 
 				<%
 				}

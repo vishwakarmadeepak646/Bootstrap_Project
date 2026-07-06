@@ -3,6 +3,8 @@ package com.sunilos.p4.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import com.sunilos.p4.bean.EmployeeBean;
+import com.sunilos.p4.bean.FacultyBean;
 import com.sunilos.p4.bean.InterviewBean;
 import com.sunilos.p4.exception.ApplicationException;
 import com.sunilos.p4.exception.DuplicateRecordException;
@@ -10,10 +12,20 @@ import com.sunilos.p4.util.JDBCDataSource;
 
 public class InterviewModel extends BaseModel<InterviewBean> {
 
+	public InterviewBean findByCandidateName(String name) {
+		return findByUniqueColumn("candidateName", name);
+	}
+	
 	@Override
 	public long add(InterviewBean bean) throws ApplicationException, DuplicateRecordException {
 		Connection conn = null;
 		int pk = 0;
+		
+		 
+		InterviewBean existbean = findByCandidateName(bean.getCandidateName());
+		if (existbean != null && existbean.getId() != bean.getId()) {
+			throw new DuplicateRecordException("Interviewer Name already exists");
+		}
 
 		try {
 			conn = JDBCDataSource.getConnection();
@@ -53,6 +65,12 @@ public class InterviewModel extends BaseModel<InterviewBean> {
 
 		Connection conn = null;
 		int pk = 0;
+
+		 
+		InterviewBean existbean = findByCandidateName(bean.getCandidateName());
+		if (existbean != null && existbean.getId() != bean.getId()) {
+			throw new DuplicateRecordException("Interviewer Name already exists");
+		}
 
 		try {
 			conn = JDBCDataSource.getConnection();
@@ -107,11 +125,7 @@ public class InterviewModel extends BaseModel<InterviewBean> {
 		return sql.toString();
 	}
 
-	public InterviewBean findByCandidateName(String name) {
-
-		return findByUniqueColumn("candidateName", name);
-
-	}
+	
 
 	@Override
 	public String getTable() {
