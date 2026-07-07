@@ -196,7 +196,7 @@ public abstract class BaseCtl<B extends BaseBean, M extends BaseModel> extends H
 	}
 
 	/**
-	 * Contains submit logics
+	 * It Contains submit logics
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
