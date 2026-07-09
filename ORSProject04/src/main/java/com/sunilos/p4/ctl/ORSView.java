@@ -41,7 +41,7 @@ public interface ORSView {
 	public String MY_PROFILE_VIEW = PAGE_FOLDER + "/MyProfileView.jsp";
 	public String FORGET_PASSWORD_VIEW = PAGE_FOLDER + "/ForgetPasswordView.jsp";
 	public String MARKSHEET_MERIT_LIST_VIEW = PAGE_FOLDER + "/MarksheetMeritListView.jsp";
-
+	public String UPLOAD_PHOTO_CTL = APP_CONTEXT + "/ctl/uploadphoto";
 
 	public String ERROR_CTL = "/ctl/MarksheetCtl";
 
