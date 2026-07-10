@@ -28,7 +28,7 @@ String locale = ms.getLanguage();
 			class="card-header text-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
 			style="background: linear-gradient(135deg, #0d2137 0%, #1565c0 100%);">
 			<h5 class="mb-0 fw-bold">
-				<i class="bi bi-cart me-2"></i><%= ms.get("daily.insuranceList") %>
+				<i class="bi bi-cart me-2"></i><%=ms.get("daily.insuranceList")%>
 			</h5>
 			<div class="d-flex gap-2">
 				<a href="<%=ORSView.INSURANCE_REPORT_CTL%>" target="_blank"
@@ -39,7 +39,7 @@ String locale = ms.getLanguage();
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
 				</a> <a href="<%=ORSView.INSURANCE_CTL%>"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
-					class="bi bi-plus-circle me-1"></i> <%= ms.get("daily.addInsurance") %>
+					class="bi bi-plus-circle me-1"></i> <%=ms.get("daily.addInsurance")%>
 				</a>
 			</div>
 		</div>
@@ -60,12 +60,13 @@ String locale = ms.getLanguage();
 					value="<%=ServletUtility.getParameter("claimStatus", request)%>">
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_SEARCH%>" class="btn btn-primary btn-sm">
-					<i class="bi bi-search me-1"></i> <%= ms.get("button.search") %>
+					<i class="bi bi-search me-1"></i>
+					<%=ms.get("button.search")%>
 				</button>
 				<button type="submit" name="operation"
 					value="<%=BaseCtl.OP_DELETE%>"
 					class="btn btn-danger btn-sm ms-auto">
-					<i class="bi bi-trash me-1"></i><%= ms.get("button.delete.selected") %>
+					<i class="bi bi-trash me-1"></i><%=ms.get("button.delete.selected")%>
 				</button>
 			</div>
 
@@ -107,12 +108,12 @@ String locale = ms.getLanguage();
 						<tr>
 							<th width="40"><input type="checkbox"
 								onclick="document.querySelectorAll('input[name=ids]').forEach(c=>c.checked=this.checked)"></th>
-							<th> <%= ms.get("daily.sr") %> </th>
-							<th> <%= ms.get("daily.cstName") %> </th>
-							<th> <%= ms.get("daily.policyType") %> </th>
-							<th> <%= ms.get("daily.preAmt") %> </th>
-							<th> <%= ms.get("daily.status") %> </th>
-							<th> <%= ms.get("button.edit") %> </th>
+							<th><%=ms.get("daily.sr")%></th>
+							<th><%=ms.get("daily.cstName")%></th>
+							<th><%=ms.get("daily.policyType")%></th>
+							<th><%=ms.get("daily.preAmt")%></th>
+							<th><%=ms.get("daily.status")%></th>
+							<th><%=ms.get("button.edit")%></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -125,12 +126,12 @@ String locale = ms.getLanguage();
 								value="<%=bean.getId()%>"></td>
 							<td class="text-muted small"><%=index++%></td>
 							<td class="fw-semibold"><%=bean.getCustomer_name()%></td>
-							<td> <%= bean.getPolicy_type() %></td>
+							<td><%=bean.getPolicy_type()%></td>
 							<td><%=bean.getPremium_amt()%></td>
 							<td><%=bean.getClaim_status()%></td>
 							<td><a href="InsuranceCtl?id=<%=bean.getId()%>"
 								class="btn btn-sm btn-outline-primary"> <i
-									class="bi bi-pencil"></i> <%= ms.get("button.edit") %>
+									class="bi bi-pencil"></i> <%=ms.get("button.edit")%>
 							</a></td>
 						</tr>
 						<%
