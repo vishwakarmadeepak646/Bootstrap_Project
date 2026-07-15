@@ -46,7 +46,7 @@ public class UploadPhotoCtl extends HttpServlet {
 			bean = model.findByPK(id);
 		} catch (ApplicationException e) {
 			e.printStackTrace();
-		}
+		} 
 
 		String basePath = PropertyReader.getValue("photoPath");
 
