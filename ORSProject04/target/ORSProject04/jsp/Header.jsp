@@ -453,8 +453,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 					href="<%=ORSView.WELCOME_CTL%>"> <i class="bi bi-house-fill"></i>
 						<span class="d-lg-none ms-1">Home</span>
 				</a></li>
-				
-				
+
+
 				<%-- <li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle d-flex align-items-center gap-1 px-2"
 					href="#" data-bs-toggle="dropdown" aria-expanded="false"> <img
@@ -489,10 +489,25 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								</div>
 							</div>
 						</li>
-						<li><a class="dropdown-item mt-1"
-							href="<%=ORSView.MY_PROFILE_CTL%>"> <i
-								class="bi bi-person-circle me-2 text-info"></i> <%=ms.get("login.profile")%>
+						<%-- <li><a class="dropdown-item mt-1"
+							href="<%=ORSView.MY_PROFILE_CTL%>"> <img
+								src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=userBean.getId()%>"	<!-- <i class="bi bi-person-circle me-2 text-info"></i> -->
+								alt="User Photo" class="rounded-circle border" width="20"
+								height="20" align="top"
+								style="object-fit: cover; flex-shrink: 0;">
+
+
+								<%=ms.get("login.profile")%>
+						</a></li> --%>
+
+						<li><a class="dropdown-item d-flex align-items-center"
+							href="<%=ORSView.MY_PROFILE_CTL%>"> <img
+								src="<%=ORSView.UPLOAD_PHOTO_CTL%>?id=<%=userBean.getId()%>"
+								class="rounded-circle border" width="22" height="22"
+								style="object-fit: cover;"> <span class="ms-2"><%=ms.get("login.profile")%></span>
+
 						</a></li>
+
 						<li><a class="dropdown-item"
 							href="<%=ORSView.CHANGE_PASSWORD_CTL%>"> <i
 								class="bi bi-key me-2 text-warning"></i> <%=ms.get("login.changePss")%>

@@ -70,15 +70,17 @@ String locale = ms.getLanguage();
 					onerror="this.style.display='none';" alt="User Photo"
 					class="rounded-circle border" width="80" height="80"
 					style="object-fit: cover;">
-				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST"
-					enctype="multipart/form-data"
+					
+				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST" enctype="multipart/form-data"
 					class="d-flex align-items-center gap-2">
-					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
-						type="file" name="photo" class="form-control form-control-sm"
-						accept="image/*">
+					
+					<input type="hidden" name="id" value="<%=bean.getId()%>"> 
+					
+					<input type="file" name="photo" class="form-control form-control-sm" accept="image/*">
+					
 					<button type="submit"
 						class="btn btn-sm btn-outline-primary text-nowrap">
-						<i class="bi bi-upload me-1"></i> <%= ms.get("user.editUser") %>
+						<i class="bi bi-upload me-1"></i> <%= ms.get("user.uPhoto") %>
 					</button>
 				</form>
 			</div>
