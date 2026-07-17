@@ -95,6 +95,10 @@ public class MyProfileCtl extends BaseCtl<UserBean, UserModel> {
 		bean.setGender(DataUtility.getString(request.getParameter("gender")));
 
 		bean.setDob(DataUtility.getDate(request.getParameter("dob")));
+		
+		bean.setRoleId(DataUtility.getLong(request.getParameter("roleId")));
+
+		bean.setPassword(DataUtility.getString(request.getParameter("password")));
 
 		populateDTO(bean, request);
 

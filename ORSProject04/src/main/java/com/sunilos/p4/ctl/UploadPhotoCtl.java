@@ -142,8 +142,9 @@ public class UploadPhotoCtl extends HttpServlet {
 			// response.getWriter().println("Please select a photo.");
 
 			ServletUtility.setErrorMessage("Photo is required", request);
-			ServletUtility.forwardPage(getView(), request, response);
-
+			
+			ServletUtility.forwardPage(view, request, response);
+			
 			return;
 		}
 
@@ -200,7 +201,5 @@ public class UploadPhotoCtl extends HttpServlet {
 		}
 	}
 
-	public String getView() {
-		return ORSView.USER_VIEW;
-	}
+
 }

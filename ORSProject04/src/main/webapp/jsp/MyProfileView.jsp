@@ -57,6 +57,7 @@ genderMap.put("F", "Female");
 				<form action="<%=ORSView.UPLOAD_PHOTO_CTL%>" method="POST"
 					enctype="multipart/form-data"
 					class="d-flex align-items-center gap-2">
+					<input type="hidden" name="view" value="<%=ORSView.MY_PROFILE_VIEW%>">
 					<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 						type="file" name="photo" class="form-control form-control-sm"
 						accept="image/*">
@@ -72,6 +73,9 @@ genderMap.put("F", "Female");
 
 			<form name="profileForm" action="<%=ORSView.MY_PROFILE_CTL%>"
 				method="POST">
+				
+				
+		
 				<input type="hidden" name="id" value="<%=bean.getId()%>"> <input
 					type="hidden" name="createdBy" value="<%=bean.getCreatedBy()%>">
 				<input type="hidden" name="modifiedBy"
@@ -80,6 +84,10 @@ genderMap.put("F", "Female");
 					value="<%=DataUtility.getTimestamp(bean.getCreatedDatetime())%>">
 				<input type="hidden" name="modifiedDatetime"
 					value="<%=DataUtility.getTimestamp(bean.getModifiedDatetime())%>">
+					
+					<input type="hidden" name="roleId" value="<%=bean.getRoleId()%>">
+					<input type="hidden" name="password" value="<%=bean.getPassword()%>">
+			
 
 				<div class="mb-3">
 					<label class="form-label fw-semibold">Login ID</label> <input

@@ -80,6 +80,9 @@ String locale = ms.getLanguage();
 					
 					<input type="hidden" name="id" value="<%=bean.getId()%>"> 
 					
+										<input type="hidden" name="view" value="<%=ORSView.USER_VIEW%>">
+					
+					
 					<input type="file" name="photo" class="form-control form-control-sm" accept="image/*" >
 					
 					<button type="submit"
@@ -87,6 +90,7 @@ String locale = ms.getLanguage();
 						<i class="bi bi-upload me-1"></i> <%= ms.get("user.uPhoto") %>
 					</button>
 				</form>
+				
 			</div>
 			<%
 			}
