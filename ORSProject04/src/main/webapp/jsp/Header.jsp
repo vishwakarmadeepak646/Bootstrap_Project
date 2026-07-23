@@ -391,6 +391,24 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.INTERVIEW_LIST_CTL%>" target=""> <i
 								class="bi bi-person-badge-fill me-2 text-warning"></i> <%=ms.get("daily.IntList")%>
 						</a></li>
+						
+						<!-- Smart Light -->
+						<li><hr class="dropdown-divider border-secondary"></li>
+						<li>
+							<h6 class="dropdown-header text-uppercase text-warning small">
+								<i class="bi bi-lamp me-1"></i>
+								<%=ms.get("daily.light")%>
+							</h6>
+						</li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SMARTLIGHT_CTL%>" target=""> <i
+								class="bi bi-lamp me-2 text-warning"></i><%=ms.get("daily.lightAdd")%> 
+
+						</a></li>
+						<li><a class="dropdown-item"
+							href="<%=ORSView.SMARTLIGHT_LIST_CTL%>" target=""> <i
+								class="bi bi-lamp me-2 text-warning"></i><%=ms.get("daily.lightList")%>  
+						</a></li>
 
 
 						<!-- Insurance -->
@@ -410,6 +428,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 							href="<%=ORSView.INSURANCE_LIST_CTL%>" target=""> <i
 								class="bi bi-person-heart me-2 text-warning"></i> <%=ms.get("daily.insuranceList")%>
 						</a></li>
+						
+						
 
 					</ul></li>
 

@@ -115,5 +115,10 @@ public interface ORSView {
 	public String INSURANCE_LIST_VIEW = PAGE_FOLDER + "/InsuranceListView.jsp";
 	public String INSURANCE_CTL = APP_CONTEXT + "/ctl/InsuranceCtl";
 	public String INSURANCE_LIST_CTL = APP_CONTEXT + "/ctl/InsuranceListCtl";
+	
+	public String SMARTLIGHT_VIEW = PAGE_FOLDER + "/SmartLightView.jsp";
+	public String SMARTLIGHT_LIST_VIEW = PAGE_FOLDER + "/SmartLightListView.jsp";
+	public String SMARTLIGHT_CTL = APP_CONTEXT + "/ctl/SmartLightCtl";
+	public String SMARTLIGHT_LIST_CTL = APP_CONTEXT + "/ctl/SmartLightListCtl";
 
 }
